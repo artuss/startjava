@@ -56,15 +56,15 @@ class VariablesTheme {
         System.out.println("Новые значения переменных: число 1 - " + num1 + ", число 2 - " + num2);
         System.out.println("2.Арифметическая операция. \nИсходные значения переменных: число 1 - " + num1 +
                 ", число 2 - " + num2);
-        tmp = num1 + num2;
-        num1 = tmp - num1;
-        num2 = tmp - num2;
+        num1 += num2;
+        num2 = num1 - num2;
+        num1 -= num2;
         System.out.println("Новые значения переменных: число 1 - " + num1 + ", число 2 - " + num2);
         System.out.println("3.Побитовая операция '^'. \nИсходные значения переменных: число 1 - " + num1 +
                 ", число 2 - " + num2);
-        tmp = num1 ^ num2;
-        num1 ^= tmp;
-        num2 ^= tmp;
+        num1 ^= num2;
+        num2 ^= num1;
+        num1 ^= num2;
         System.out.println("Новые значения переменных: число 1 - " + num1 + ", число 2 - " + num2);
 
         System.out.println("\n6 - Вывод символов и их кодов.");
@@ -79,7 +79,7 @@ class VariablesTheme {
                 (int) sym4 + " - " + sym4 + "\n" +
                 (int) sym5 + " - " + sym5 + "\n");
 
-                System.out.println("\n7 - Вывод в консоль ASCII-арт Дюка.");
+        System.out.println("\n7 - Вывод в консоль ASCII-арт Дюка.");
         char slash = '/';
         char backSlash = '\\';
         char lowLine = '_';
@@ -94,14 +94,14 @@ class VariablesTheme {
         System.out.println("\n8 - Вывод количества сотен, десятков и единиц числа.");
         int scrNum = 123;
         int hundreds = scrNum / 100;
-        int dozens = scrNum / 10 % 10;
-        int units = scrNum % 10;
+        int tens = scrNum / 10 % 10;
+        int ones = scrNum % 10;
         System.out.println("Число - " + scrNum + " содержит:\n" +
                 hundreds + " сотня\n" +
-                dozens + " десятка\n" +
-                units + " единицы\n");
-        System.out.println("Сумма его цифр = " + (hundreds + dozens + units));
-        System.out.println("Произведение его цифр = " + (hundreds * dozens * units));
+                tens + " десятка\n" +
+                ones + " единицы\n");
+        System.out.println("Сумма его цифр = " + (hundreds + tens + ones));
+        System.out.println("Произведение его цифр = " + (hundreds * tens * ones));
 
         System.out.println("\n9 - Вывод времени.");
         scrNum = 86_399;

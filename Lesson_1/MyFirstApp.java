@@ -2,6 +2,7 @@ import java.nio.charset.Charset;
 import java.util.Scanner;
 
 public class MyFirstApp {
+    
     public static void main(String[] args) {
         System.out.println("Написано однажды, работает везде");
         System.out.println(Charset.defaultCharset().displayName());
